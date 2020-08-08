@@ -1,0 +1,292 @@
+:root {
+	/*PALETA DE COLORES DE LA PAGINA*/
+	--color-base: #222831;
+	--color-base-light: #393e46;
+	--color-primario: #00adb5;
+	--color-light: #ecf0f1;
+	--color-border: #dadada;
+
+	/*TIPOGRAFIAS*/
+}
+//paleta de colores
+$color-base: var(--color-base);
+$color-base-light: var(--color-base-light);
+$color-primario: var(--color-primario);
+$color-light: var(--color-light);
+$color-border: var(--color-border);
+
+//tipografias
+@mixin open($bold) {
+	font-family: "Open Sans", sans-serif;
+	font-weight: $bold; //400 - 700
+}
+@mixin font-size($b: 1.5em, $m: 1.38em, $s: 1.22em, $es: 0.9em) {
+	h1 {
+		font-size: $b;
+	}
+	h2 {
+		font-size: $m;
+	}
+
+	h3 {
+		font-size: $s;
+	}
+	p {
+		font-size: $es;
+	}
+}
+
+//FORMATEO DE LA WEB
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+//ESTILOS PARA LA WEB | MOVIL |
+body {
+	//Layout
+	//Styles
+	@include font-size(1.5em, 1.38em, 1.22em, 0.92em);
+	font-size: 15px;
+}
+.header {
+	//Layout
+	width: 100%;
+	height: 3.5em;
+	line-height: 3.5em;
+	text-align: center;
+	//Styles
+	background-color: $color-base;
+	&__title {
+		//layout
+		//style
+		@include open(700);
+		color: $color-light;
+	}
+}
+.main {
+	//Layout
+	width: 100%;
+	height: auto;
+	//Style
+	background-color: $color-light;
+	&__content {
+		//Layout
+		width: 100%;
+		min-height: 12.5em;
+		padding: 0.5em;
+		//Style
+		&:nth-child(even) {
+			background-color: $color-base-light;
+		}
+	}
+	.text--light .main__text,
+	.text--light .main__title {
+		color: $color-light;
+	}
+	&__title {
+		//Layout
+		width: 100%;
+		height: 1.5em;
+		line-height: 1.5em;
+		text-align: center;
+		margin-bottom: 0.2em;
+		//Style
+		@include open(700);
+		color: $color-base;
+	}
+	&__img {
+		//Layout
+		width: 17.5em;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&__text {
+		//Layout
+		max-width: 20em;
+		margin: 0 auto;
+		//Style
+		color: $color-base-light;
+		@include open(400);
+	}
+}
+// ESTILOS PARA LA WEB | MOVIL GRANDE |
+@media screen and (min-width: 450px) {
+	body {
+		font-size: 16px;
+	}
+	.main {
+		&__content {
+			overflow: hidden;
+			padding: 0.8em;
+			&:nth-child(even) {
+				background-color: $color-base-light;
+			}
+		}
+
+		.text--light .main__text,
+		.text--light .main__title {
+			color: $color-light;
+		}
+		&__img {
+			//Layout
+			width: 50%;
+			height: 11.5em;
+			left: 0;
+			transform: none;
+			float: left;
+		}
+		&__title {
+			margin-bottom: 0.5em;
+		}
+		&__text {
+			//Layout
+			width: 50%;
+			height: 12.5em;
+			margin: none;
+			float: left;
+			padding: 3em 1em;
+			//Style
+		}
+	}
+}
+// ESTILOS PARA LA WEB | MINI TABLET |
+@media screen and (min-width: 640px) {
+	body {
+		font-size: 16.25px;
+		@include font-size(1.5em, 1.38em, 1.22em, 1em);
+	}
+	.main {
+		&__content {
+			overflow: hidden;
+			padding: 1.5em;
+			&:nth-child(even) {
+				background-color: $color-base-light;
+			}
+		}
+		.text--light .main__text,
+		.text--light .main__title {
+			color: $color-light;
+		}
+		&__title {
+			margin-bottom: 0.5em;
+		}
+		&__text {
+			height: 11em;
+			padding: 2.5em 2em;
+			//Style
+		}
+	}
+}
+//ESTILOS PARA LA WEB | TABLET |
+@media screen and (min-width: 720px) {
+	body {
+		font-size: 17px;
+	}
+}
+//ESTILOS PARA LA WEB | TABLET GRANDE |
+@media screen and (min-width: 768px) {
+	body {
+		font-size: 17.5px;
+	}
+	.main {
+		&__content {
+			//Layout
+			width: 50%;
+			min-height: 12.5em;
+			padding: 1em;
+			float: left;
+			border: 0.001em solid $color-border;
+			//Style
+			&:nth-child(even) {
+				background-color: transparent;
+			}
+		}
+		.text--light .main__text {
+			color: $color-base-light;
+		}
+		.text--light .main__title {
+			color: $color-base;
+		}
+		&__title {
+			//Layout
+			margin-bottom: 0.5em;
+		}
+		&__img {
+			//Layout
+			width: 80%;
+			height: 11.5em;
+			left: 50%;
+			transform: translateX(-50%);
+			float: none;
+		}
+		&__text {
+			//Layout
+			width: 80%;
+			height: 12.5em;
+			margin: none;
+			float: none;
+			padding: 0.5em 0;
+			//Style
+		}
+	}
+}
+//ESTILOS PARA LA WEB | MINI PORTATIL |
+@media screen and (min-width: 840px) {
+	body {
+		font-size: 18px;
+		@include font-size(1.7em, 1.45em, 1.35em, 1.2em);
+	}
+}
+//ESTILOS PARA LA WEB | PORTATIL |
+@media screen and (min-width: 1150px) {
+	body {
+		font-size: 18.5px;
+	}
+	.main {
+		&__content {
+			//Layout
+			width: 33.33%;
+		}
+		&__title {
+			//Layout
+			margin-bottom: 0.5em;
+		}
+		&__img {
+			//Layout
+			width: 85%;
+		}
+		&__text {
+			//Layout
+			width: 85%;
+
+			padding: 0.8em 0;
+			//Style
+		}
+	}
+}
+//ESTILOS PARA LA WEB | PANTALLA |
+@media screen and (min-width: 1150px) {
+	body {
+		font-size: 19px;
+	}
+}
+//ESTILOS PARA LA WEB | PANTALLA |
+@media screen and (min-width: 1150px) {
+	body {
+		font-size: 18.5px;
+		@include font-size(1.7em, 1.4em, 1.3em, 1em);
+	}
+	.main {
+		&__content {
+			//Layout
+			width: 25%;
+		}
+	}
+}

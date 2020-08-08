@@ -1,0 +1,269 @@
+:root {
+  /*PALETA DE COLORES DE LA PAGINA*/
+  --color-base: #222831;
+  --color-base-light: #393e46;
+  --color-primario: #00adb5;
+  --color-light: #ecf0f1;
+  --color-border: #dadada;
+  /*TIPOGRAFIAS*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 15px;
+}
+body h1 {
+  font-size: 1.5em;
+}
+body h2 {
+  font-size: 1.38em;
+}
+body h3 {
+  font-size: 1.22em;
+}
+body p {
+  font-size: 0.92em;
+}
+
+.header {
+  width: 100%;
+  height: 3.5em;
+  line-height: 3.5em;
+  text-align: center;
+  background-color: var(--color-base);
+}
+.header__title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: var(--color-light);
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-light);
+}
+.main__content {
+  width: 100%;
+  min-height: 12.5em;
+  padding: 0.5em;
+}
+.main__content:nth-child(even) {
+  background-color: var(--color-base-light);
+}
+.main .text--light .main__text,
+.main .text--light .main__title {
+  color: var(--color-light);
+}
+.main__title {
+  width: 100%;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-bottom: 0.2em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: var(--color-base);
+}
+.main__img {
+  width: 17.5em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main__text {
+  max-width: 20em;
+  margin: 0 auto;
+  color: var(--color-base-light);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    font-size: 16px;
+  }
+
+  .main__content {
+    overflow: hidden;
+    padding: 0.8em;
+  }
+  .main__content:nth-child(even) {
+    background-color: var(--color-base-light);
+  }
+  .main .text--light .main__text,
+.main .text--light .main__title {
+    color: var(--color-light);
+  }
+  .main__img {
+    width: 50%;
+    height: 11.5em;
+    left: 0;
+    transform: none;
+    float: left;
+  }
+  .main__title {
+    margin-bottom: 0.5em;
+  }
+  .main__text {
+    width: 50%;
+    height: 12.5em;
+    margin: none;
+    float: left;
+    padding: 3em 1em;
+  }
+}
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 16.25px;
+  }
+  body h1 {
+    font-size: 1.5em;
+  }
+  body h2 {
+    font-size: 1.38em;
+  }
+  body h3 {
+    font-size: 1.22em;
+  }
+  body p {
+    font-size: 1em;
+  }
+
+  .main__content {
+    overflow: hidden;
+    padding: 1.5em;
+  }
+  .main__content:nth-child(even) {
+    background-color: var(--color-base-light);
+  }
+  .main .text--light .main__text,
+.main .text--light .main__title {
+    color: var(--color-light);
+  }
+  .main__title {
+    margin-bottom: 0.5em;
+  }
+  .main__text {
+    height: 11em;
+    padding: 2.5em 2em;
+  }
+}
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 17.5px;
+  }
+
+  .main__content {
+    width: 50%;
+    min-height: 12.5em;
+    padding: 1em;
+    float: left;
+    border: 0.001em solid var(--color-border);
+  }
+  .main__content:nth-child(even) {
+    background-color: transparent;
+  }
+  .main .text--light .main__text {
+    color: var(--color-base-light);
+  }
+  .main .text--light .main__title {
+    color: var(--color-base);
+  }
+  .main__title {
+    margin-bottom: 0.5em;
+  }
+  .main__img {
+    width: 80%;
+    height: 11.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    float: none;
+  }
+  .main__text {
+    width: 80%;
+    height: 12.5em;
+    margin: none;
+    float: none;
+    padding: 0.5em 0;
+  }
+}
+@media screen and (min-width: 840px) {
+  body {
+    font-size: 18px;
+  }
+  body h1 {
+    font-size: 1.7em;
+  }
+  body h2 {
+    font-size: 1.45em;
+  }
+  body h3 {
+    font-size: 1.35em;
+  }
+  body p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 1150px) {
+  body {
+    font-size: 18.5px;
+  }
+
+  .main__content {
+    width: 33.33%;
+  }
+  .main__title {
+    margin-bottom: 0.5em;
+  }
+  .main__img {
+    width: 85%;
+  }
+  .main__text {
+    width: 85%;
+    padding: 0.8em 0;
+  }
+}
+@media screen and (min-width: 1150px) {
+  body {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  body {
+    font-size: 18.5px;
+  }
+  body h1 {
+    font-size: 1.7em;
+  }
+  body h2 {
+    font-size: 1.4em;
+  }
+  body h3 {
+    font-size: 1.3em;
+  }
+  body p {
+    font-size: 1em;
+  }
+
+  .main__content {
+    width: 25%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
